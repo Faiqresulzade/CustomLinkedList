@@ -17,7 +17,11 @@ list.AddFirst(2);
 list.AddFirst(3);
 list.AddLast(4);
 list.RemoveFirst();
+
 foreach (var item in list)
 {
     Console.WriteLine(item);
 }
+
+Console.WriteLine("Count : " + list.Count);
+Console.WriteLine("Head : " + list.First);

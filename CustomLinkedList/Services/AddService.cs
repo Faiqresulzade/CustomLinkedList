@@ -2,7 +2,7 @@
 
 public class AddService<T> : SingletonBase<AddService<T>>, IAddService<T>
 {
-    public void AfterAdd(ref Node<T> current, T existingValue, T newValue)
+    public void AfterAdd(ref Node<T> current, T existingValue, T newValue, ref int count)
     {
         while (current is not null && !current.Value!.Equals(existingValue)) current = current.Next;
 
@@ -13,15 +13,16 @@ public class AddService<T> : SingletonBase<AddService<T>>, IAddService<T>
         newNode.Prev = current;
 
         if (newNode.Next is not null) newNode.Next.Prev = newNode;
+        count++;
     }
 
-    public void BeforeAdd(ref Node<T>? head, T existingValue, T newValue)
+    public void BeforeAdd(ref Node<T>? head, T existingValue, T newValue, ref int count)
     {
         if (head is null) throw new InvalidOperationException("Linked list is empty.");
 
         if (head.Value!.Equals(existingValue))
         {
-            FirstAdd(newValue, ref head);
+            FirstAdd(newValue, ref head, ref count);
             return;
         }
 
@@ -32,9 +33,10 @@ public class AddService<T> : SingletonBase<AddService<T>>, IAddService<T>
 
         var newNode = new Node<T>(newValue, current.Next) { Next = current.Next };
         current.Next = newNode;
+        count++;
     }
 
-    public void FirstAdd(T value, ref Node<T>? head)
+    public void FirstAdd(T value, ref Node<T>? head, ref int count)
     {
         var newNode = new Node<T>(value);
 
@@ -45,13 +47,14 @@ public class AddService<T> : SingletonBase<AddService<T>>, IAddService<T>
         }
 
         head = newNode;
+        count++;
     }
 
-    public void LastAdd(ref Node<T> head, T value)
+    public void LastAdd(ref Node<T> head, T value, ref int count)
     {
         if (head is null)
         {
-            FirstAdd(value, ref head!);
+            FirstAdd(value, ref head!,ref count);
             return;
         }
         var lastNode = head;
@@ -60,5 +63,6 @@ public class AddService<T> : SingletonBase<AddService<T>>, IAddService<T>
         var newLastNode = new Node<T>(value);
         lastNode.Next = newLastNode;
         newLastNode.Prev = lastNode;
+        count++;
     }
 }

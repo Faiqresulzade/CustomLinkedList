@@ -27,19 +27,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Honor\\.nuget\\packages\\": {}
+    "C:\\Users\\fbrasulzade\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Honor\\Desktop\\LinkedList\\CustomLinkedList\\Contracts\\Contracts.csproj",
+      "projectUniqueName": "C:\\Users\\fbrasulzade\\Desktop\\CustomLinkedList\\CustomLinkedList\\Contracts\\Contracts.csproj",
       "projectName": "Contracts",
-      "projectPath": "C:\\Users\\Honor\\Desktop\\LinkedList\\CustomLinkedList\\Contracts\\Contracts.csproj",
-      "packagesPath": "C:\\Users\\Honor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Honor\\Desktop\\LinkedList\\CustomLinkedList\\Contracts\\obj\\",
+      "projectPath": "C:\\Users\\fbrasulzade\\Desktop\\CustomLinkedList\\CustomLinkedList\\Contracts\\Contracts.csproj",
+      "packagesPath": "C:\\Users\\fbrasulzade\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\fbrasulzade\\Desktop\\CustomLinkedList\\CustomLinkedList\\Contracts\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Honor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\fbrasulzade\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -48,14 +48,15 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://gitlab.xalqbank.az/api/v4/projects/278/packages/nuget/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Honor\\Desktop\\LinkedList\\CustomLinkedList\\Shared\\Shared.csproj": {
-              "projectPath": "C:\\Users\\Honor\\Desktop\\LinkedList\\CustomLinkedList\\Shared\\Shared.csproj"
+            "C:\\Users\\fbrasulzade\\Desktop\\CustomLinkedList\\CustomLinkedList\\Shared\\Shared.csproj": {
+              "projectPath": "C:\\Users\\fbrasulzade\\Desktop\\CustomLinkedList\\CustomLinkedList\\Shared\\Shared.csproj"
             }
           }
         }
@@ -90,7 +91,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
